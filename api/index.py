@@ -26,7 +26,10 @@ from flask_cors import CORS
 
 # Import pre-initialised Supabase clients from the dedicated module.
 # Credentials are loaded and validated there — never here.
-from supabase_client import supabase_admin, supabase_auth
+try:
+    from api.supabase_client import supabase_admin, supabase_auth  # Vercel (package import)
+except ImportError:
+    from supabase_client import supabase_admin, supabase_auth  # Local (direct import)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Flask App
@@ -113,7 +116,10 @@ def serialise_row(row: dict) -> dict:
 @app.route("/api/health", methods=["GET"])
 def health():
     """Verify the API is running and Supabase is reachable."""
-    from supabase_client import SUPABASE_URL as _url
+    try:
+        from api.supabase_client import SUPABASE_URL as _url
+    except ImportError:
+        from supabase_client import SUPABASE_URL as _url
 
     err = _check_clients()
     if err:
