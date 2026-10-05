@@ -1,0 +1,8 @@
+# Python dependencies for the FinPath Flask backend
+# Vercel installs these automatically via @vercel/python
+
+flask==3.1.1
+supabase==2.15.2
+python-dotenv==1.1.0
+gunicorn==23.0.0
+flask-cors==5.0.1

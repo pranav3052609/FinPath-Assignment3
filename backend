@@ -1,0 +1,25 @@
+# ─── Supabase Configuration ───────────────────────────────────────────────────
+# Get these from: https://supabase.com/dashboard → Project Settings → API
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Public URL of your Supabase project
+SUPABASE_URL=https://your-project-id.supabase.co
+
+# Public "anon" key — safe to expose in frontend (protected by RLS)
+SUPABASE_ANON_KEY=your-anon-key-here
+
+# Secret "service_role" key — NEVER expose to the frontend or commit to Git
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+
+# ─── Vite / Frontend ─────────────────────────────────────────────────────────
+# These VITE_ prefixed variables are embedded into the frontend build.
+# They MUST match the backend values above.
+VITE_SUPABASE_URL=https://dynosadlrollsxfmskad.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5bm9zYWRscm9sbHN4Zm1za2FkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA5MDIwMTQsImV4cCI6MjEwNjQ3ODAxNH0.2bx9e35tPu9073UeRN-DG0AnheEwRiJ_yNNW-wekI7Y
+
+# ─── Flask ────────────────────────────────────────────────────────────────────
+FLASK_ENV=development
+FLASK_DEBUG=1
+VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_jCq8tI4Y4GW1fzYGpDDNeA_R-ZDnooi
+SUPABASE_SECRET_KEY=sb_secret_YnKXL
+0jUyGoD8m-bHTNWZQ_nJIaFFft
